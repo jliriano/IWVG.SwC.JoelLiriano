@@ -63,5 +63,9 @@ public class Fraction {
         return this.denominator*fraction.getNumerator() == this.numerator*fraction.getDenominator();
     }
 
-
+    public void invert() {
+        int temp = this.numerator;
+        this.numerator = this.denominator;
+        this.denominator = temp;
+    }
 }

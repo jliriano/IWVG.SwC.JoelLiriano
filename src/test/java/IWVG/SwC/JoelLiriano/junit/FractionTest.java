@@ -35,5 +35,12 @@ public class FractionTest {
         assertTrue(multiplied.isEquivalent(expected));
     }
 
+    @Test
+    void testinvert() {
+        fraction.invert();
+        assertEquals(3,this.fraction.getNumerator());
+        assertEquals(4,this.fraction.getDenominator());
+    }
+
 }
 
