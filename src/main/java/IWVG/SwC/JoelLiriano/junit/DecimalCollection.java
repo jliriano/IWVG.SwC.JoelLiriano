@@ -24,7 +24,7 @@ public class DecimalCollection {
     public double sum() {
         assert collection != null;
         if (this.collection.isEmpty()) {
-            throw new ArithmeticException("Empty collection");
+            throw new ArithmeticException(EMPTY_COLLECTION);
         }
         return this.collection.stream().mapToDouble(Double::doubleValue).sum();
 
