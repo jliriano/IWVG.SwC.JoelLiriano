@@ -42,5 +42,10 @@ public class FractionTest {
         assertEquals(4,this.fraction.getDenominator());
     }
 
+    @Test
+    void testIsPropia(){
+        assertEquals(false,this.fraction.isPropia());
+    }
+
 }
 
