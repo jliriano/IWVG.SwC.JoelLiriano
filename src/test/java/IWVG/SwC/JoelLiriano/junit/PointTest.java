@@ -34,6 +34,13 @@ class PointTest {
     }
 
     @Test
+    void testmodifyPoint() {
+        point.modifyPoint(2, 2);
+        assertEquals(2, point.getX());
+        assertEquals(2, point.getY());
+    }
+
+    @Test
     void testModule() {
         assertEquals(3.6055, point.module(), 10e-5);
     }
