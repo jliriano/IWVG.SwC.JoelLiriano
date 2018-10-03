@@ -53,4 +53,15 @@ public class Fraction {
         return denominator;
     }
 
+    public Fraction multiply(Fraction fraction){
+        int newNumerator = this.numerator*fraction.getNumerator();
+        int newDenominator = this.denominator*fraction.getDenominator();
+        return new Fraction(newNumerator, newDenominator);
+    }
+
+    public boolean isEquivalent(Fraction fraction){
+        return this.denominator*fraction.getNumerator() == this.numerator*fraction.getDenominator();
+    }
+
+
 }
