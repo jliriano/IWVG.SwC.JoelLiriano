@@ -53,19 +53,26 @@ public class Fraction {
         return denominator;
     }
 
-    public Fraction multiply(Fraction fraction){
-        int newNumerator = this.numerator*fraction.getNumerator();
-        int newDenominator = this.denominator*fraction.getDenominator();
+    public Fraction multiply(Fraction fraction) {
+        int newNumerator = this.numerator * fraction.getNumerator();
+        int newDenominator = this.denominator * fraction.getDenominator();
         return new Fraction(newNumerator, newDenominator);
     }
 
-    public boolean isEquivalent(Fraction fraction){
-        return this.denominator*fraction.getNumerator() == this.numerator*fraction.getDenominator();
+    public boolean isEquivalent(Fraction fraction) {
+        return this.denominator * fraction.getNumerator() == this.numerator * fraction.getDenominator();
     }
 
     public void invert() {
         int temp = this.numerator;
         this.numerator = this.denominator;
         this.denominator = temp;
+    }
+
+    public boolean isPropia() {
+        if (this.numerator < this.denominator) {
+            return true;
+        }
+        return false;
     }
 }
