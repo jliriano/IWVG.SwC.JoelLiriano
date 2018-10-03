@@ -7,6 +7,8 @@ public class DecimalCollection {
 
     private List<Double> collection;
 
+    private static final String EMPTY_COLLECTION = "Empty collection";
+
     public DecimalCollection() {
         this.collection = new ArrayList<>();
     }
@@ -31,7 +33,7 @@ public class DecimalCollection {
     public double higher() {
         assert collection != null;
         if (this.collection.isEmpty()) {
-            throw new ArithmeticException("Empty collection");
+            throw new ArithmeticException(EMPTY_COLLECTION);
         }
         double higher = Double.NEGATIVE_INFINITY;
         for (double item : this.collection) {
@@ -45,7 +47,7 @@ public class DecimalCollection {
     public double lower() {
         assert collection != null;
         if (this.collection.isEmpty()) {
-            throw new ArithmeticException("Empty collection");
+            throw new ArithmeticException(EMPTY_COLLECTION);
         }
         double lower = Double.POSITIVE_INFINITY;
         for (double item : this.collection) {
