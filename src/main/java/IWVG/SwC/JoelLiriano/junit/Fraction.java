@@ -53,4 +53,10 @@ public class Fraction {
         return denominator;
     }
 
+    public Fraction multiply(Fraction fraction){
+        int newNumerator = this.numerator*fraction.getNumerator();
+        int newDenominator = this.denominator*fraction.getDenominator();
+        return new Fraction(newNumerator, newDenominator);
+    }
+
 }
