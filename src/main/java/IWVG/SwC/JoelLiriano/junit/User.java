@@ -18,6 +18,10 @@ public class User {
         return string.trim().substring(0, 1).toUpperCase() + string.substring(1).toLowerCase();
     }
 
+    public String sourceFormat() {
+        return this.familyName.toUpperCase() + ", " + this.initials();
+    }
+
     public String fullName() {
         return this.name + " " + this.familyName;
     }

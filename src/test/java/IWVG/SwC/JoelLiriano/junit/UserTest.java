@@ -10,12 +10,12 @@ public class UserTest {
 
     @BeforeEach
     void before() {
-        this.user = new User(1,"Jon","Snow");
+        this.user = new User(1, "Jon", "Snow");
     }
 
     @Test
     void testFullName() {
-        assertEquals("Jon Snow",user.fullName());
+        assertEquals("Jon Snow", user.fullName());
     }
 
     @Test
@@ -31,5 +31,10 @@ public class UserTest {
     @Test
     void testGetNumber() {
         assertEquals(1, user.getNumber());
+    }
+
+    @Test
+    void testSourceFormat() {
+        assertEquals("SNOW, J.", user.sourceFormat());
     }
 }
