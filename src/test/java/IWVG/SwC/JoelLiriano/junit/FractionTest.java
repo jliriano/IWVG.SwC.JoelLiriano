@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class FractionTest {
     private Fraction fraction;
@@ -26,6 +27,12 @@ public class FractionTest {
     @Test
     void testGetDenominator() {
         assertEquals(3,this.fraction.getDenominator());
+    }
+    @Test
+    void testMultiply() {
+        Fraction multiplied = fraction.multiply(new Fraction(1,2));
+        Fraction expected = new Fraction(4,6);
+        assertTrue(multiplied.isEquivalent(expected));
     }
 
 }
